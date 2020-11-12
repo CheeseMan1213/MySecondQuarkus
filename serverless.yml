@@ -1,0 +1,19 @@
+service: amazon-dynamodb-quickstart
+provider:
+  name: aws
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Scan
+      Resource: arn:aws:dynamodb:us-east-1:475640621870:table/student
+  runtime: java11
+  profile: default
+  timeout: 180
+package:
+  artifact: target/amazon-dynamodb-quickstart-1.0.0-SNAPSHOT-runner.jar
+functions:
+  test:
+    handler: org.acme.spring.web.AwsLambdaHandler
+    environment:
+      FUNCTION_NAME: handleRequest
+
