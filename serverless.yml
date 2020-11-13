@@ -5,15 +5,16 @@ provider:
     - Effect: Allow
       Action:
         - dynamodb:Scan
-      Resource: arn:aws:dynamodb:us-east-1:475640621870:table/student
+      Resource: arn:aws:dynamodb:us-east-1:475640621870:table/QuarkusFruits
   runtime: java11
+  region: us-east-1
   profile: default
   timeout: 180
 package:
-  artifact: target/amazon-dynamodb-quickstart-1.0.0-SNAPSHOT-runner.jar
+  artifact: target/function.zip
 functions:
-  test:
-    handler: org.acme.spring.web.AwsLambdaHandler
+  amazonDynamodbQuickstart:
+    handler: not.used
+    runtime: provided
     environment:
-      FUNCTION_NAME: handleRequest
-
+      DISABLE_SIGNAL_HANDLERS: true
