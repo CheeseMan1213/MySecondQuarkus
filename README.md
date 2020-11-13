@@ -1,3 +1,4 @@
+This README may no longer be valid. I have made changes in order to practice with AWS Lambda and GraalVM as well.
 # Quarkus demo: DynamoDB Client
 
 This example showcases how to use the AWS DynamoDB client with Quarkus. As a prerequisite install Install [AWS Command line interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
