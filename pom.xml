@@ -34,18 +34,18 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-resteasy</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.quarkus</groupId>-->
+<!--            <artifactId>quarkus-resteasy</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-resteasy-mutiny</artifactId>
         </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-resteasy-jsonb</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.quarkus</groupId>-->
+<!--            <artifactId>quarkus-resteasy-jsonb</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-amazon-dynamodb</artifactId>
@@ -55,13 +55,17 @@
             <artifactId>quarkus-amazon-lambda</artifactId>
         </dependency>
         <dependency>
-            <groupId>software.amazon.awssdk</groupId>
-            <artifactId>url-connection-client</artifactId>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-spring-web</artifactId>
         </dependency>
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
-            <artifactId>netty-nio-client</artifactId>
+            <artifactId>url-connection-client</artifactId>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>software.amazon.awssdk</groupId>-->
+<!--            <artifactId>netty-nio-client</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>io.quarkus</groupId>
