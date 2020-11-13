@@ -3,6 +3,8 @@ package org.acme.dynamodb;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 import java.util.Map;
 import javax.enterprise.context.ApplicationScoped;
@@ -21,7 +23,8 @@ import javax.inject.Named;
 @ApplicationScoped
 public class AwsLambdaHandler implements RequestHandler<Map<String, String>, List<Fruit>> {
 
-	@Inject
+//	@Inject
+	@Autowired
 	FruitSyncService service;
 
 	@Override
