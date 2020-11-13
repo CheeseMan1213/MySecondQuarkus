@@ -6,6 +6,10 @@ import java.util.Objects;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
+/*
+    It looks like nothing is "Spring" in the entity/model files from my other projects that use SQL.
+    But, there is for when I used MongoDB.
+*/
 @RegisterForReflection
 public class Fruit {
 
