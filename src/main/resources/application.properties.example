@@ -2,6 +2,8 @@
 
 quarkus.lambda.handler=amazonDynamodbQuickstart
 quarkus.dynamodb.aws.region=us-east-1
-quarkus.dynamodb.aws.credentials.type=static
-quarkus.dynamodb.aws.credentials.static-provider.access-key-id=stuff
-quarkus.dynamodb.aws.credentials.static-provider.secret-access-key=stuff
+# I have commented these out because they are no longer needed
+# because I am using a role now.
+# quarkus.dynamodb.aws.credentials.type=static
+# quarkus.dynamodb.aws.credentials.static-provider.access-key-id=stuff
+# quarkus.dynamodb.aws.credentials.static-provider.secret-access-key=stuff
