@@ -9,10 +9,15 @@ import javax.inject.Inject;
 import io.smallrye.mutiny.Uni;
 import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient;
 
-@ApplicationScoped
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+
+//@ApplicationScoped
+@Configuration
 public class FruitAsyncService extends AbstractService {
 
-    @Inject
+//    @Inject
+	@Autowired
     DynamoDbAsyncClient dynamoDB;
 
     public Uni<List<Fruit>> findAll() {

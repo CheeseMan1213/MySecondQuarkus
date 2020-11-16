@@ -13,26 +13,35 @@ import javax.ws.rs.core.MediaType;
 
 import io.smallrye.mutiny.Uni;
 
-@Path("/async-fruits")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+//@Path("/async-fruits")
+//@Produces(MediaType.APPLICATION_JSON)
+//@Consumes(MediaType.APPLICATION_JSON)
+@RestController
+@RequestMapping("/async-fruits")
 public class FruitAsyncResource {
 
-    @Inject
+//    @Inject
+	@Autowired
     FruitAsyncService service;
 
-    @GET
+//    @GET
+	@GetMapping
     public Uni<List<Fruit>> getAll() {
         return service.findAll();
     }
 
-    @GET
-    @Path("{name}")
-    public Uni<Fruit> getSingle(@PathParam("name") String name) {
+//    @GET
+//    @Path("{name}")
+	@GetMapping("/{name}")
+    public Uni<Fruit> getSingle(@PathVariable("name") String name) {
         return service.get(name);
     }
 
-    @POST
+//    @POST
+	@PostMapping
     public Uni<List<Fruit>> add(Fruit fruit) {
         return service.add(fruit)
                 .onItem().ignore().andSwitchTo(this::getAll);

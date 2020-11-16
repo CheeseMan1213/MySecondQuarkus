@@ -8,10 +8,15 @@ import javax.inject.Inject;
 
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 
-@ApplicationScoped
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+
+//@ApplicationScoped
+@Configuration
 public class FruitSyncService extends AbstractService {
 
-    @Inject
+//    @Inject
+	@Autowired
     DynamoDbClient dynamoDB;
 
     public List<Fruit> findAll() {
